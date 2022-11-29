@@ -1,0 +1,23 @@
+<html>
+
+<body>
+    <h1>Sandwich Home</h1>
+    <img src="https://m.media-amazon.com/images/I/718h5TPyp3L._AC_SL1000_.jpg" alt="sandwiches" width='400', heigth='auto'>
+
+    <h3>Ingredients</h3>
+
+    <ul>
+         {% for ingredient in ingredients %}
+        <li>
+            <a href="/sandwich/ingredients/{{ingredient}}"> {{ingredient}}</a>
+
+        </li>
+        {% endfor %}
+    </ul> 
+
+    <p>Click the button if your are hungry!</p>
+        <div>
+            <button><a href="/sandwich/random">Make a sandwich</a></button>
+        </div>
+    
+</html>
