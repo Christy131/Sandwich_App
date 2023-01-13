@@ -6,9 +6,9 @@ import random
 
 ingredients ={
     'meats': ['turkey', 'veggie burger', 'ham', 'roast beef', 'steak', 'chicken', 'meat ball', 'bacon'],
-    'cheeses': ['provolone', 'pepper jack', 'swiss', 'chedder', 'mozzaerella', 'american'],
-    'toppings': ['onions', 'tomato', 'lettuce', 'avacado', 'pickles', 'banana peppers', 'olives'],
-    'breads': ['white', 'wheat','pretzel', 'sub roll', 'crossiant'],
+    'cheeses': ['provolone', 'pepper jack', 'swiss', 'chedder', 'mozzaerella', 'american', 'colby', 'gouda'],
+    'toppings': ['onions', 'tomato', 'lettuce', 'avacado', 'pickles', 'banana peppers', 'olives', 'mayo'],
+    'breads': ['white', 'wheat','pretzel', 'sub roll', 'crossiant', 'multi-grain', 'tortilla', 'pocket bread'],
 }
 
 class SandwichappView(View):
@@ -49,5 +49,14 @@ class SandwichesView(View):
             'bread': bread
              } 
         ) 
-    
-        
+class MenuView(View):    
+    def get(self, request):
+        return render(
+            request, 
+            "menu.html",
+            context={
+                "meats": ingredients["meats"],
+                "cheeses": ingredients["cheeses"],
+                "toppings": ingredients["toppings"],
+            }
+        )  

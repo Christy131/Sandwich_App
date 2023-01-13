@@ -1,5 +1,5 @@
 <html>
-
+   
 <body>
     <h1>Sandwich Home</h1>
     <img src="https://m.media-amazon.com/images/I/718h5TPyp3L._AC_SL1000_.jpg" alt="sandwiches" width='400', heigth='auto'>
@@ -14,7 +14,10 @@
         </li>
         {% endfor %}
     </ul> 
-
+    <div>
+        <button><a href="{% url 'menu' %}">Menu</a></button>
+    
+    </div> 
     <p>Click the button if your are hungry!</p>
         <div>
             <button><a href="/sandwich/random">Make a sandwich</a></button>
